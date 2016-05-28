@@ -9,7 +9,7 @@ except ImportError:
 import requests
 from bs4 import BeautifulSoup
 
-from utils import log, should_ignore
+from .utils import log, should_ignore
 
 
 class Crawler(object):
@@ -34,7 +34,7 @@ class Crawler(object):
             self.ignore = ignore.split(',')
         else:
             self.ignore = []
-
+            
     def get(self, url):
         """
         Get a specific URL, log its response, and return its content.

@@ -137,8 +137,50 @@
 <h1>Crawler Python API<a class="headerlink" href="#crawler-python-api" title="Permalink to this headline">¶</a></h1>
 <p>Getting started with Crawler is easy.
 The main class you need to care about is crawler.main.Crawler</p>
-<p>crawler.utils</p>
-<p>crawler.utils.should_ignore</p>
+<dl class="class">
+<dt id="crawler.main.Crawler">
+<em class="property">class </em><code class="descclassname">crawler.main.</code><code class="descname">Crawler</code><span class="sig-paren">(</span><em>url</em>, <em>delay</em>, <em>ignore</em><span class="sig-paren">)</span><a class="headerlink" href="#crawler.main.Crawler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main Crawler object.</p>
+<p>Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Crawler</span><span class="p">(</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">crawl</span><span class="p">()</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>delay</strong> &#8211; Number of seconds to wait between searches</li>
+<li><strong>ignore</strong> &#8211; Paths to ignore</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="crawler.main.Crawler.crawl">
+<code class="descname">crawl</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#crawler.main.Crawler.crawl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crawl the URL set up in the crawler.</p>
+<p>This is the main entry point, and will block while it runs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="crawler.main.Crawler.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#crawler.main.Crawler.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a specific URL, log its response, and return its content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>url</strong> &#8211; The fully qualified URL to retrieve</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">should_ignore</span><span class="p">([</span><span class="s1">&#39;blog/$&#39;</span><span class="p">],</span> <span class="s1">&#39;http://ericholscher.com/blog/&#39;</span><span class="p">)</span>
 <span class="go">True</span>
 </pre></div>

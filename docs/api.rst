@@ -4,11 +4,9 @@ ____________________
 Getting started with Crawler is easy.
 The main class you need to care about is crawler.main.Crawler
 
-.. autodoc:: crawler.main
+.. autoclass:: crawler.main.Crawler
+	:members:
 
-crawler.utils
-
-crawler.utils.should_ignore
 
 .. testsetup::
 	

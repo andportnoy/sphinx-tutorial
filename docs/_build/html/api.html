@@ -137,7 +137,29 @@
 <h1>Crawler Python API<a class="headerlink" href="#crawler-python-api" title="Permalink to this headline">¶</a></h1>
 <p>Getting started with Crawler is easy.
 The main class you need to care about is crawler.main.Crawler</p>
-<span class="target" id="module-crawler"></span></div>
+<p>crawler.utils</p>
+<p>crawler.utils.should_ignore</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">should_ignore</span><span class="p">([</span><span class="s1">&#39;blog/$&#39;</span><span class="p">],</span> <span class="s1">&#39;http://ericholscher.com/blog/&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">should_ignore</span><span class="p">([</span><span class="s1">&#39;home&#39;</span><span class="p">],</span> <span class="s1">&#39;http://ericholscher.com/blog/&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;http://ericholscher.com/blog/&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="go">OK: 200 http://ericholscher.com/blog/</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;http://ericholscher.com/blog/&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="go">ERR: 500 http://ericholscher.com/blog/</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;http://ericholscher.com/blog/&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="go">OK: 500 http://ericholscher.com/blog/</span>
+</pre></div>
+</div>
+</div>
 
 
            </div>
